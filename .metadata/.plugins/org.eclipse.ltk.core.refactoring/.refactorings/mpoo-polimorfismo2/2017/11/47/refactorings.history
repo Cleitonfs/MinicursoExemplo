@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.ufrpe.mpoo.polimorfismo.dominio.Funcionario&apos; to &apos;FuncionarioC&apos;&#x0D;&#x0A;- Original project: &apos;mpoo-polimorfismo2&apos;&#x0D;&#x0A;- Original element: &apos;br.ufrpe.mpoo.polimorfismo.dominio.Funcionario&apos;&#x0D;&#x0A;- Renamed element: &apos;br.ufrpe.mpoo.polimorfismo.dominio.FuncionarioC&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Funcionario&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.ufrpe.mpoo.polimorfismo.dominio{Funcionario.java[Funcionario" matchStrategy="1" name="FuncionarioC" qualified="false" references="true" similarDeclarations="false" stamp="1511384284259" textual="false" version="1.0"/>
+</session>

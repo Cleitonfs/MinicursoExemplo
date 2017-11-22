@@ -1,0 +1,55 @@
+package br.ufrpe.mpoo.helloworld;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class HelloWorld {
+	private static final SimpleDateFormat FORMATADOR_HORA = 
+			new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	private String nome;
+	private Date nascimento;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Date getNascimento() {
+		return nascimento;
+	}
+	public void setNascimento(Date nascimento) {
+		this.nascimento = nascimento;
+	}
+	
+	public static Date createDate(String data) {
+		Date result = null;
+		try {
+			result = FORMATADOR_HORA.parse(data);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public int getIdade() {
+		Calendar calendarAtual = Calendar.getInstance();
+		int anoAtual = calendarAtual.get(Calendar.YEAR);
+		
+		Calendar calendarNascimento = Calendar.getInstance();
+		calendarNascimento.setTime(this.nascimento);
+		int anoNascimento = calendarNascimento.get(Calendar.YEAR);
+		
+		int idade = anoAtual-anoNascimento;
+		
+		//TODO: ajustar para calcular a idade considerando o dia e mês de nascimento
+		return idade;
+	}
+	
+	public void imprimir() {
+		String sNascimento = FORMATADOR_HORA.format(this.nascimento);
+		System.out.println(this.nome + " nasceu em " + sNascimento + " e tem " + this.getIdade() + " anos");
+
+	}
+}

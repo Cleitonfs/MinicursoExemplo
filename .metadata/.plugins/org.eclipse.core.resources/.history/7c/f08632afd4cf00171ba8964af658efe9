@@ -1,0 +1,15 @@
+import java.util.function.Function;
+
+public class AppMain {
+	
+	public static void main(String[] args) {
+		
+		Func ze = new Func();
+		ze.setNome("Ze");
+		ze.setSalario(1000);
+		ze.setCpf(111111111);
+		ze.imprimir();
+		
+		};
+	}
+
